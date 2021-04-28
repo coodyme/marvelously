@@ -15,6 +15,7 @@ Este projeto foi desenvolvido utilizando das seguintes dependências:
 - [React Responsive Carousel](https://www.npmjs.com/package/react-responsive-carousel)
 - [Styled Components](https://styled-components.com)
 - [React Router DOM](https://reactrouter.com/web/guides/quick-start)
+- [md5](https://www.npmjs.com/package/md5)
 
 ### 💻 Inicializando o Projeto
 
