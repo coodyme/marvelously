@@ -1,3 +1,4 @@
+// Hook simplesinho pra fazer uma brincadeira com konami code hehe
 import React from 'react'
 
 const useEasterEgg = () => {
