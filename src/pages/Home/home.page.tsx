@@ -1,11 +1,15 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import mainLogoImg from '../../assets/main_logo.png'
 
 import { HomeContainer } from './home.style'
 
 const Home: React.FC = () => {
   return (
     <HomeContainer>
-      <h1>Teste asd</h1>
+      <Link to="/login">
+        <img src={mainLogoImg} alt="Logo" />
+      </Link>
     </HomeContainer>
   )
 }

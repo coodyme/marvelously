@@ -12,8 +12,7 @@ Este projeto foi desenvolvido utilizando das seguintes dependências:
 
 - [React](https://reactjs.org)
 - [Axios](https://axios-http.com)
-- [Material-UI](https://material-ui.com)
-- [React Material UI Carousel](https://www.npmjs.com/package/react-material-ui-carousel)
+- [React Responsive Carousel](https://www.npmjs.com/package/react-responsive-carousel)
 - [Styled Components](https://styled-components.com)
 - [React Router DOM](https://reactrouter.com/web/guides/quick-start)
 
