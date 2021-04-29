@@ -32,6 +32,11 @@ export const CardContainer = styled.div`
     font-size: 2.4rem;
     color: ${props => props.theme.text};
     margin-top: 1.4rem;
+    text-align: center;
+  }
+
+  .content span {
+    margin: 0 1.4rem;
   }
 
   .content a {
@@ -39,5 +44,10 @@ export const CardContainer = styled.div`
     color: ${props => props.theme.secondary};
     text-decoration: none;
     margin-bottom: 1.4rem;
+    text-align: center;
+  }
+
+  .content a:hover {
+    text-decoration: underline;
   }
 `

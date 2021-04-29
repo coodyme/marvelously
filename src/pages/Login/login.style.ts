@@ -78,6 +78,11 @@ export const LoginContainer = styled.div`
     color: ${props => props.theme.text};
     text-decoration: none;
     font-size: 1.8rem;
+    transition: opacity 0.2s;
+  }
+
+  .enter:hover {
+    opacity: 0.8;
   }
 
   .footer {
