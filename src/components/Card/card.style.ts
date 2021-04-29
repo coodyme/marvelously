@@ -34,11 +34,13 @@ export const CardContainer = styled.div`
 
   .content span {
     margin: 0 1.4rem;
+    max-height: 100px;
+    overflow: hidden;
   }
 
   .content a {
     font-size: 1.8rem;
-    color: ${props => props.theme.secondary};
+    color: ${props => props.theme.text};
     text-decoration: none;
     margin-bottom: 1.4rem;
     text-align: center;

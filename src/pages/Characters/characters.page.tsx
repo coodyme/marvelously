@@ -1,8 +1,8 @@
+/* eslint-disable prettier/prettier */
 import React, { useState, useEffect } from 'react'
 
 import Menu from '../../components/Menu/menu.component'
 import Card from '../../components/Card/card.component'
-import Modal from '../../components/Modal/modal.component'
 import Loading from '../../components/Loading/loading.component'
 
 import Carousel from 'react-multi-carousel'
@@ -10,11 +10,7 @@ import 'react-multi-carousel/lib/styles.css'
 
 import { CharactersContent } from './characters.style'
 
-import rightImg from '../../assets/right.png'
-import leftImg from '../../assets/left.png'
-
 import md5 from 'md5'
-import useFetch from '../../hooks/useFetch'
 
 import api from '../../services/api.service'
 
@@ -59,30 +55,46 @@ const Characters: React.FC = () => {
     }
   }
 
-  useEffect(() => {
-    const fetch = async () => {
-      setIsLoading(true)
+  async function sanitize(characters: ICharacter[]) {
+    const sanitized: ICharacter[] = []
 
-      const response = await api.get(
-        `/characters?ts=${TIME}&apikey=${PUBLIC_KEY}&hash=${HASH}`
+    characters.forEach(character => {
+      if (
+        character.desc !== '' &&
+        character.thumb !==
+        `http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg`
       )
+        sanitized.push(character)
+    })
 
-      const { data } = response.data
-      const results = data.results
+    return sanitized
+  }
 
-      const characters: Array<ICharacter> = results.map(
-        (result: ICharacterRequest) => {
-          return {
-            name: result.name,
-            desc: result.description,
-            thumb: `${result.thumbnail.path}.${result.thumbnail.extension}`
-          }
+  const fetch = async () => {
+    setIsLoading(true)
+
+    const response = await api.get(
+      `/characters?ts=${TIME}&apikey=${PUBLIC_KEY}&hash=${HASH}&limit=100&offset=0`
+    )
+
+    const { data } = response.data
+    const results = data.results
+
+    const characters: Array<ICharacter> = results.map(
+      (result: ICharacterRequest) => {
+        return {
+          name: result.name,
+          desc: result.description,
+          thumb: `${result.thumbnail.path}.${result.thumbnail.extension}`
         }
-      )
+      }
+    )
+    const sanitizedCharacters = await sanitize(characters)
+    setCharacters(sanitizedCharacters)
+    setIsLoading(false)
+  }
 
-      setCharacters(characters)
-      setIsLoading(false)
-    }
+  useEffect(() => {
     fetch()
   }, [])
 

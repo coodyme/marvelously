@@ -38,6 +38,14 @@ Siga os passos a seguir para inicializar o projeto
   yarn
   ```
 
+- **Vari[aveis de Ambiente**
+E necessario que voce configure as variaveis no arquivo .env
+```shell
+API=https://gateway.marvel.com:443/v1/public
+PUBLIC_KEY=your_public_key
+PRIVATE_KEY=your_private_key
+```
+
 - **Executando**
 
   Para executar o projeto siga os passos:
