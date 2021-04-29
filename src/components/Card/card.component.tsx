@@ -2,15 +2,20 @@ import React from 'react'
 
 import { CardContainer } from './card.style'
 
-const Card: React.FC = () => {
+type CardProps = {
+  title: string
+  desc: string
+  thumb: string
+}
+
+const Card: React.FC<CardProps> = ({ title, desc, thumb }) => {
   return (
-    <CardContainer>
+    <CardContainer
+      style={{ background: `url(${thumb})`, backgroundSize: 'cover' }}
+    >
       <div className="content">
-        <p>Title</p>
-        <span>
-          Lorem ipsum dollar sit ammet. Lorem ipsum dollar sit ammet. Lorem
-          ipsum dollar sit ammet.{' '}
-        </span>
+        <p>{title}</p>
+        <span>{desc}</span>
         <br />
         <a href="/">ver detalhes</a>
       </div>

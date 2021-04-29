@@ -7,9 +7,6 @@ export const CardContainer = styled.div`
   display: flex;
   flex-direction: column-reverse;
 
-  background: url('images/comic.png');
-  background-size: cover;
-
   border: 1px none;
   border-radius: 25px;
 

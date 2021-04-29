@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react'
-import Carousel, {
-  arrowsPlugin,
-  slidesToShowPlugin
-} from '@brainhubeu/react-carousel'
-import '@brainhubeu/react-carousel/lib/style.css'
+
 import Menu from '../../components/Menu/menu.component'
 import Card from '../../components/Card/card.component'
 import Modal from '../../components/Modal/modal.component'
+import Loading from '../../components/Loading/loading.component'
+
+import Carousel from 'react-multi-carousel'
+import 'react-multi-carousel/lib/styles.css'
 
 import { CharactersContent } from './characters.style'
 
@@ -41,6 +41,24 @@ const Characters: React.FC = () => {
   const [characters, setCharacters] = useState<ICharacter[]>()
   const [isLoading, setIsLoading] = useState(false)
 
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+      slidesToSlide: 3 // optional, default to 1.
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+      slidesToSlide: 2 // optional, default to 1.
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+      slidesToSlide: 1 // optional, default to 1.
+    }
+  }
+
   useEffect(() => {
     const fetch = async () => {
       setIsLoading(true)
@@ -72,32 +90,38 @@ const Characters: React.FC = () => {
     <>
       <Menu />
       <CharactersContent>
-        <Carousel
-          plugins={[
-            {
-              resolve: arrowsPlugin,
-              options: {
-                arrowLeft: <img src={leftImg} />,
-                arrowLeftDisabled: <img src="" />,
-                arrowRight: <img src={rightImg} />,
-                arrowRightDisabled: <img src="" />,
-                addArrowClickHandler: true
-              }
-            },
-            {
-              resolve: slidesToShowPlugin,
-              options: {
-                numberOfSlides: 3
-              }
-            }
-          ]}
-        >
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-        </Carousel>
+        {isLoading ? (
+          <Loading />
+        ) : (
+          <Carousel
+            swipeable={true}
+            draggable={true}
+            showDots={false}
+            responsive={responsive}
+            ssr={false} // means to render carousel on server-side.
+            infinite={false}
+            autoPlay={false}
+            autoPlaySpeed={1000}
+            keyBoardControl={false}
+            customTransition="all .5"
+            transitionDuration={500}
+            removeArrowOnDeviceType={['tablet', 'mobile']}
+            containerClass="carousel-container"
+            dotListClass="custom-dot-list-style"
+            itemClass="carousel-item-padding-40-px"
+          >
+            {characters?.map((character, index) => {
+              return (
+                <Card
+                  key={index}
+                  title={character.name}
+                  desc={character.desc}
+                  thumb={character.thumb}
+                />
+              )
+            })}
+          </Carousel>
+        )}
       </CharactersContent>
     </>
   )

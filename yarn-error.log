@@ -1,5 +1,5 @@
 Arguments: 
-  /home/augusto/.nvm/versions/node/v15.5.0/bin/node /usr/share/yarn/bin/yarn.js add @types/brainhubeu_react-carousel -D
+  /home/augusto/.nvm/versions/node/v15.5.0/bin/node /usr/share/yarn/bin/yarn.js add @types/react-multi-carousel
 
 PATH: 
   /home/augusto/.zinit/polaris/bin:/home/augusto/.nvm/versions/node/v15.5.0/bin:/home/augusto/.pyenv/plugins/pyenv-virtualenv/shims:/home/augusto/.pyenv/shims:/home/augusto/.pyenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/augusto/.dotnet/tools:/opt/yarn-[version]/bin
@@ -14,7 +14,7 @@ Platform:
   linux x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@types%2fbrainhubeu_react-carousel: Not found
+  Error: https://registry.yarnpkg.com/@types%2freact-multi-carousel: Not found
       at Request.params.callback [as _callback] (/usr/share/yarn/lib/cli.js:66988:18)
       at Request.self.callback (/usr/share/yarn/lib/cli.js:140749:22)
       at Request.emit (node:events:376:20)
@@ -41,9 +41,11 @@ npm manifest:
       "@types/react": "^17.0.0",
       "@types/react-dom": "^17.0.0",
       "axios": "^0.21.1",
+      "install": "^0.13.0",
       "md5": "^2.3.0",
       "react": "^17.0.2",
       "react-dom": "^17.0.2",
+      "react-multi-carousel": "^2.6.2",
       "react-router-dom": "^5.2.0",
       "react-scripts": "4.0.3",
       "styled-components": "^5.2.3",
@@ -76,6 +78,7 @@ npm manifest:
     },
     "devDependencies": {
       "@types/axios": "^0.14.0",
+      "@types/brainhubeu__react-carousel": "^2.0.2",
       "@types/md5": "^2.3.0",
       "@types/react-router-dom": "^5.1.7",
       "@types/styled-components": "^5.1.9",
@@ -1846,6 +1849,13 @@ Lockfile:
     integrity sha512-kSjgDMZONiIfSH1Nxcr5JIRMwUetDki63FSQfpTCz8ogF3Ulqm8+mr5f78dUYs6vMiB6gBusQqfQmBvHZj/lwg==
     dependencies:
       "@babel/types" "^7.3.0"
+  
+  "@types/brainhubeu__react-carousel@^2.0.2":
+    version "2.0.2"
+    resolved "https://registry.yarnpkg.com/@types/brainhubeu__react-carousel/-/brainhubeu__react-carousel-2.0.2.tgz#f238255f3fecbab98d8a413303b4fa52aa924624"
+    integrity sha512-qmOfB2AcENaQWGI0SNgte8+4+sHMFtfaBpU0ks+YpbCIkKw0zow0pTLPVoFYvskPI7ieM+bYtO22XpkXUS7oUg==
+    dependencies:
+      "@types/react" "*"
   
   "@types/eslint@^7.2.6":
     version "7.2.6"
@@ -6098,6 +6108,11 @@ Lockfile:
     resolved "https://registry.npmjs.org/ini/-/ini-1.3.8.tgz"
     integrity sha512-JV/yugV2uzW5iMRSiZAyDtQd+nxtUnjeLt0acNdw98kKLrvuRVyB80tsREOE7yvGVgalhZ6RNXCmEHkUKBKxew==
   
+  install@^0.13.0:
+    version "0.13.0"
+    resolved "https://registry.yarnpkg.com/install/-/install-0.13.0.tgz#6af6e9da9dd0987de2ab420f78e60d9c17260776"
+    integrity sha512-zDml/jzr2PKU9I8J/xyZBQn8rPCAY//UOYNmR01XwNwyfhEWObo2SWfSl1+0tm1u6PhxLwDnfsT/6jB7OUxqFA==
+  
   internal-ip@^4.3.0:
     version "4.3.0"
     resolved "https://registry.npmjs.org/internal-ip/-/internal-ip-4.3.0.tgz"
@@ -9392,6 +9407,11 @@ Lockfile:
     version "17.0.1"
     resolved "https://registry.npmjs.org/react-is/-/react-is-17.0.1.tgz"
     integrity sha512-NAnt2iGDXohE5LI7uBnLnqvLQMtzhkiAOLXTmv+qnF9Ky7xAPcX8Up/xWIhxvLVGJvuLiNc4xQLtuqDRzb4fSA==
+  
+  react-multi-carousel@^2.6.2:
+    version "2.6.2"
+    resolved "https://registry.yarnpkg.com/react-multi-carousel/-/react-multi-carousel-2.6.2.tgz#c78d38fbfab704394a72f26ffa161b8963138a1f"
+    integrity sha512-qSrupBGazqYS/LVQAUCWiEAPhCrO0QufP5PcpDCA6Klig3egdNMwIdkkoU6Xlm9zEQ/hFp57bNr7F4sd0ANLyA==
   
   react-refresh@^0.8.3:
     version "0.8.3"
