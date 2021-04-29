@@ -1,6 +1,9 @@
 import styled from 'styled-components'
 
-export const CharactersContainer = styled.div`
-  width: 100vw;
-  height: 100vh;
+export const CharactersContent = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 `

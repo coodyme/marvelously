@@ -1,15 +1,19 @@
 import React from 'react'
 
 import Menu from '../../components/Menu/menu.component'
+import Card from '../../components/Card/card.component'
+import Modal from '../../components/Modal/modal.component'
 
-import { CharactersContainer } from './characters.style'
+import { CharactersContent } from './characters.style'
 
 const Characters: React.FC = () => {
   return (
-    <CharactersContainer>
+    <>
       <Menu />
-      <h1>Characters</h1>
-    </CharactersContainer>
+      <CharactersContent>
+        <Card />
+      </CharactersContent>
+    </>
   )
 }
 
