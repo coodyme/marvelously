@@ -12,7 +12,7 @@ Este projeto foi desenvolvido utilizando das seguintes dependências:
 
 - [React](https://reactjs.org)
 - [Axios](https://axios-http.com)
-- [React Responsive Carousel](https://www.npmjs.com/package/react-responsive-carousel)
+- [React Carousel](https://brainhubeu.github.io/react-carousel/)
 - [Styled Components](https://styled-components.com)
 - [React Router DOM](https://reactrouter.com/web/guides/quick-start)
 - [md5](https://www.npmjs.com/package/md5)
