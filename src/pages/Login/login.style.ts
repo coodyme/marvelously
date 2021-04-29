@@ -9,11 +9,20 @@ export const LoginContainer = styled.div`
   justify-content: center;
   align-items: center;
 
+  h1 {
+    font-size: 2.4rem;
+    color: ${props => props.theme.primary};
+  }
+
   .fields {
     display: flex;
     flex-direction: column;
     width: 350px;
     margin: 2.4rem 0;
+  }
+
+  .fields p {
+    margin: 1.4rem;
   }
 
   .fields input {
@@ -30,6 +39,31 @@ export const LoginContainer = styled.div`
     margin-top: 1.4rem;
   }
 
+  .actions {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.4rem;
+  }
+
+  .actions .save-login {
+    display: flex;
+  }
+
+  .actions .save-login input {
+    margin-right: 0.8rem;
+  }
+
+  .actions a {
+    color: ${props => props.theme.secondary};
+    text-decoration: none;
+  }
+
+  .actions a:hover {
+    color: ${props => props.theme.primary};
+    text-decoration: none;
+  }
+
   .enter {
     width: 350px;
     height: 6.8rem;
@@ -44,5 +78,22 @@ export const LoginContainer = styled.div`
     color: ${props => props.theme.text};
     text-decoration: none;
     font-size: 1.8rem;
+  }
+
+  .footer {
+    margin-top: 1.4rem;
+  }
+
+  .footer span {
+    margin-right: 0.4rem;
+  }
+
+  .footer a {
+    color: ${props => props.theme.primary};
+    text-decoration: none;
+  }
+
+  @media (max-width: 700px) {
+    width: 100vw;
   }
 `

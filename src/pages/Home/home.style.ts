@@ -5,16 +5,25 @@ export const HomeContainer = styled.div`
   height: 100vh;
 
   display: flex;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
 
   img {
-    margin-left: 150px;
     opacity: 1;
-    transition: 0.3s;
+    animation: anim 2s;
   }
 
   img:hover {
     opacity: 0.5;
+    transition: opacity 0.5s;
+  }
+
+  @keyframes anim {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 `
