@@ -7,7 +7,7 @@ import Movies from './pages/Movies/movies.page'
 import Characters from './pages/Characters/characters.page'
 import Comics from './pages/Comics/comics.page'
 
-const Router = () => {
+const Router: React.FC<BrowserRouter> = () => {
   return (
     <BrowserRouter>
       <Route path="/" exact component={Home} />

@@ -67,3 +67,7 @@ PRIVATE_KEY=your_private_key
 
   yarn build
   ```
+
+
+  * Build via Netlify
+
