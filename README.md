@@ -70,4 +70,4 @@ PRIVATE_KEY=your_private_key
 
 
   * Build via Netlify
-https://608c1f9a4f893c3d2447626b--goofy-ritchie-c399fc.netlify.app/movies
+https://608c1f9a4f893c3d2447626b--goofy-ritchie-c399fc.netlify.app
