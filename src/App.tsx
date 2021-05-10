@@ -11,7 +11,8 @@ import Movies from './pages/Movies/movies.page'
 import Characters from './pages/Characters/characters.page'
 import Comics from './pages/Comics/comics.page'
 
-const App: React.FC = () => {
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+const App = () => {
   return (
     <ThemeProvider theme={darkTheme}>
       <GlobalStyle />
