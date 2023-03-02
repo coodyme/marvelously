@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #F9CB28;
+  --secondary: #FF4D4D;
+
+  --success: #27C93F;
+  --warning: #FFBD2E;
+  --error: #EA3323;
+
+  --background: #000000;
+  --foreground: #ffffff;
+
+  --accents-1: #fafafa;
+  --accents-2: #eaeaea;
+  --accents-3: #999999;
+  --accents-4: #888888;
+  --accents-5: #666666;
+  --accents-6: #444444;
+  --accents-7: #333333;
+  --accents-8: #111111;
+
+  --header-height: 72px;
+}
+
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  touch-action: manipulation;
+  font-feature-settings: 'case' 1, 'rlig' 1, 'calt' 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  min-height: 100%;
+  height: 100%;
+  margin: 0;
+  line-height: 1.65;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  min-width: 320px;
+  direction: ltr;
+  font-feature-settings: 'kern';
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  color: var(--accents-5);
+  background-color: var(--background);
+}
+
+::selection {
+  background-color: var(--primary);
+  color: var(--foreground);
+}
+
+[role='grid']:focus {
+  outline: none;
+}
+
+svg {
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  color: var(--foreground);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--primary);
+  transition: color 0.4s ease;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+a[role='button'] {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+}
+
+svg {
+  shape-rendering: crispEdges;
+}
+
+svg path,
+svg circle {
+  shape-rendering: geometricprecision;
+}
+
+button {
+  width: 188px;
+  height: 58px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--foreground);
+  font-family: inherit;
+  background-color: transparent;
+  border: none;
+}
+
+
+input {
+  transition: background 0.2s ease;
+  font-family: inherit;
+  color: var(--foreground);
+  border: none;
+}
