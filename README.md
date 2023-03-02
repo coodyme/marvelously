@@ -1,73 +1,36 @@
-<h1 align="center">
-    Marvel
-</h1>
+A simple application to consume Marvel API from [Marvel Developer Portal](ttps://developer.marvel.com)
 
-### 📝 Sobre
+## 📋 Table of contents
 
-Teste para vaga de desenvolvedor React
+- [Stack](#📦-stack)
+- [Setup](#🏗️-setup)
+- [Usage](#🚀-usage)
+- [Deploy](#🔥-deploy)
+- [License](#📜-license)
 
-### 🧰 Dependências
+## 📦 Stack
 
-Este projeto foi desenvolvido utilizando das seguintes dependências:
+This project was developed with the following technologies.
 
-- [React](https://reactjs.org)
-- [Axios](https://axios-http.com)
-- [React Multi Carousel](https://www.npmjs.com/package/react-multi-carousel)
-- [Styled Components](https://styled-components.com)
-- [React Router DOM](https://reactrouter.com/web/guides/quick-start)
-- [md5](https://www.npmjs.com/package/md5)
+| Tech | Link |
+| --- | --- |
+| Next.js | <https://nextjs.org/> |
+| Tailwind CSS | <https://tailwindcss.com/> |
+| Vercel | <https://vercel.com/> |
+| SWR | <https://swr.vercel.app/> |
 
-### 💻 Inicializando o Projeto
+## 🏗️ Setup
 
-Siga os passos a seguir para inicializar o projeto
+Clone the repository and run yarn install.
 
-- **Clonar**
-
-  Clone o repositório para sua máquina local com o comando:
-
-  ```shell
-  git clone https://github.com/augustobritome/interview-mestres-web
-  ```
-
-- **Instalar as Dependências**
-
-  Agora você precisa usar o yarn para instalar as dependências necessárias.
-
-  ```shell
-  cd interview-mestres-web
-  yarn
-  ```
-
-- **Vari[aveis de Ambiente**
-E necessario que voce configure as variaveis no arquivo .env
 ```shell
-API=https://gateway.marvel.com:443/v1/public
-PUBLIC_KEY=your_public_key
-PRIVATE_KEY=your_private_key
+yarn install
 ```
 
-- **Executando**
+## 🚀 Usage
 
-  Para executar o projeto siga os passos:
+## 🔥 Deploy
 
+## 📜 License
 
-  * Iniciar em Modo de Desenvolvimento
-  ```shell
-  cd interview-mestres-web
-
-  yarn start
-  ```
-
-  >   Acesse por [http://localhost:3000](http://localhost:3000)
-
-
-  * Efetuar a build
-  ```shell
-  cd interview-mestres-web
-
-  yarn build
-  ```
-
-
-  * Build via Netlify
-https://608c1f9a4f893c3d2447626b--goofy-ritchie-c399fc.netlify.app
+The project is licensed under the [MIT License](https://github.com/augustobritodev/marvelously/blob/master/LICENSE)
